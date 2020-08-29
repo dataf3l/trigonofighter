@@ -1,0 +1,28 @@
+* {
+	font-family:"courier new";
+	font-size:16pt;
+	color:lightblue;
+	text-shadow: 0 0 5px white;
+}
+body {
+	background-color:black;
+
+}
+input, canvas {
+	background-color:black;
+	border:1px solid lightblue;
+	color:lightblue;
+	margin-top:5px;
+	font-weight:900;
+}
+#warnings {
+	white-space:pre;
+	min-height:20em;
+	height:20em;
+}
+#earth {
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:-1;
+}

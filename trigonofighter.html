@@ -1,0 +1,65 @@
+
+<html>
+<head>
+	<title>Trigonofighter - defend te Earth</title>
+	<script src='trigonofighter.js'></script>
+	<link rel="stylesheet" type="text/css" href="circle.css" />
+</head>
+<body onload="init()">
+
+	<input type=button value='||' 			onclick='set_speed(0)' />
+	<input type=button value='&#9654;'	 		onclick='set_speed(1)' />
+	<input type=button value='&#9654;&#9654;' 		onclick='set_speed(2)' />
+	<input type=button value='&#9654;&#9654;&#9654;' 	onclick='set_speed(3)' />
+	<input type=button value='&#9654;&#9654;&#9654;&#9654;' 	onclick='set_speed(4)' />
+	<input type=button value='&#9654;&#9654;&#9654;&#9654;&#9654;' 	onclick='set_speed(5)' />
+	<input type=button value='&#9654;&#9654;&#9654;&#9654;&#9654;&#9654;' 	onclick='set_speed(6)' />
+	<input type=button value='&#9654;&#9654;&#9654;&#9654;&#9654;&#9654;&#9654;' 	onclick='set_speed(7)' />
+	<input type=button value='&#9654;&#9654;&#9654;&#9654;&#9654;&#9654;&#9654;&#9654;' 	onclick='set_speed(8)' />
+	<input type=button value='&#9654;&#9654;&#9654;&#9654;&#9654;&#9654;&#9654;&#9654;&#9654;' 	onclick='set_speed(9)' />
+	<br/>
+	<input type=button value='Threats(t)'		onclick='run_command("t","t")' />
+	<input type=button value='Bases(l)' 		onclick='run_command("l","l")' />
+	<input type=button value='Nuke Status(n)' 	onclick='run_command("n","n")' />
+	<input type=button value='Select Base(s)' 	onclick='run_command("s",parseInt(prompt("Enter Base number (1-"+g_bases.length+")")))' />
+	<input type=button value='Fire(f)' 		onclick='run_command("f","f")' />
+	<input type=button value='Budget(b)' 		onclick='run_command("b","b")' />
+	<input type=button value='Rad2Deg(rd)' 		onclick='run_command("h", parseFloat(prompt("Enter Radians")))' />
+	<input type=button value='Deg2Rad(dr)' 		onclick='run_command("dr",parseFloat(prompt("Enter Degrees")))' />
+	<input type=button value='Deg2HMS(dh)' 		onclick='run_command("dh",parseFloat(prompt("Enter Degrees")))' />
+	<input type=button value='Ask(a)' 		onclick='run_command("a","a")' />
+	<input type=button value='Render Mode(m)' 	onclick='run_command("m","m")' />
+	<input type=button value='Zoom Mode(z)' 	onclick='run_command("z","m")' />
+	<input type=button value='Map Mode(mm)' 	onclick='run_command("mm","mm")' />
+	<input type=button value='Sin' 			onclick='run_command("sin",parseFloat(prompt("Enter Degree in Radians")))' />
+	<input type=button value='Cos' 			onclick='run_command("cos",parseFloat(prompt("Enter Degree in Radians")))' />
+	<input type=button value='Tan' 			onclick='run_command("tan",parseFloat(prompt("Enter Degree in Radians")))' />
+	<input type=button value='Help(h)' 		onclick='run_command("h","h")' />
+	<!--<input type=button value='&gt;&gt;&gt;&gt;' onclick='set_speed(4)' />-->
+
+	<hr/>
+	<div id=game_messages>
+	</div>
+	
+	<hr/>
+
+	<div id=log>
+	</div>
+
+	<hr/>
+	<div id=clock>
+	</div>
+	
+	<div id=warnings>
+	</div>
+	<form onsubmit='void(u_input());return false' action='#'>
+	Enter CMD:<br/>
+	<input type=text id=input autofocus=true />
+	<input type=submit value='Run CMD' />
+	
+	</form>
+	<hr/>
+	
+	<canvas width=1800 height=1000 id=earth />
+	</canvas>
+</body>
